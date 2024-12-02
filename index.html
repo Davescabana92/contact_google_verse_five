@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="css/index.css" />
+  <title>Google Contact</title>
+</head>
+
+<body class="bg-page-full">
+  <header class="flex padding-container justify-s-between sd-padding-container">
+    <div class="flex justify-s-between items-center w-8">
+      <div id="burger-menu" class="pointer icon transition">
+        <span class="material-symbols-outlined"> Menu</span>
+      </div>
+      <div class="w-4rem">
+        <img src="assets/images/logo.png" alt="Google contact logo" srcset="" />
+      </div>
+      <h1 class="title title-level-1">Contacts</h1>
+    </div>
+    <div class="w-90 md-w-70 flex justify-start items-center md-justify-flex-end">
+      <div class="flex input-field items-center">
+        <div class="pointer icon justify-center items-center">
+          <span class="material-symbols-outlined"> search </span>
+        </div>
+        <input type="text" name="searchInput" id="searchInput" placeholder="Recherche" />
+      </div>
+    </div>
+  </header>
+  <main class="flex padding-container justify-s-between">
+    <section id="side-bar" class="w-15 md-display-none">
+      <div>
+        <button type="button"
+          class="button addContactButton flex items-center contain button-radius-07 button-hover-shadow">
+          <span class="material-symbols-outlined margin-right-04rem">
+            add
+          </span>
+          Créer un contact
+        </button>
+      </div>
+
+      <div class="padding-top-bottom-1rem">
+        <button type="button"
+          class="button justify-s-between flex items-center button-hover-bg-color button-radius-10 w-100">
+          <p class="flex items-center justify-s-between">
+            <span class="material-symbols-outlined margin-right-04rem">
+              person
+            </span>
+            Contact
+          </p>
+
+          <span> 0</span>
+        </button>
+        <button type="button"
+          class="button flex items-center button-hover-bg-color button-radius-10 w-100 margin-top-bottom-1rem">
+          <span class="material-symbols-outlined margin-right-04rem">
+            history </span>Fréquents
+        </button>
+      </div>
+      <div>
+        <div class="flex justify-s-between items-center">
+          <h3 class="text title-level-3">Libellés</h3>
+          <div class="pointer icon transition">
+            <span class="material-symbols-outlined"> add </span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- Start main section -->
+    <section id="main-section" class="w-90 main-section md-w-100">
+
+      <!-- Start contact list container -->
+      <div id="contactListContainer" class="display-visible">
+
+        <!-- Start empty contact list -->
+        <div id="emptyContactList" class="display-visible">
+          <h3 class="title title-level-1">Contacts <span>(0)</span></h3>
+          <div class="contact-container flex justify-center items-center">
+            <div>
+              <div class="illus-size-2rem">
+                <img src="./assets/illustrations/emptycontacts_animation_cell4.png" alt="Empty contact illustration" />
+              </div>
+              <p class="text text-align-center">Aucun contact</p>
+              <div class="flex justify-center items-center margin-top-bottom-1rem">
+                <button class="button addContactButton button-radius-10 no-border flex items-center" type="button">
+                  <span class="material-symbols-outlined margin-right-04rem">
+                    person
+                  </span>
+                  Créer un contact
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- End empty contact list -->
+
+        <!-- Start contact list -->
+        <div id="contactList" class="display-none">
+          <h3 class="title title-level-1">Contacts <span>(0)</span></h3>
+          <div class="flex items-center contact-container padding-top-bottom-1rem">
+            <table class="w-100 text-align-left custom-collapse">
+              <thead class="border-bottom text">
+                <tr>
+                  <th class="padding-top-bottom-1rem">Titre</th>
+                  <th class="padding-top-bottom-1rem">E-mail</th>
+                  <th class="padding-top-bottom-1rem">Numéro de téléphone</th>
+                  <th class="padding-top-bottom-1rem">Fonction et entreprise</th>
+                  <th class="padding-top-bottom-1rem">Action</th>
+                </tr>
+              </thead>
+              <tbody id="contactListTable">
+                <!-- <tr>
+                  <td class="padding-top-bottom-1rem">
+                    <div class="flex items-center gap-1rem">
+                      <p class="text-badge">A</p>
+                      <p>Alfreds Futterkiste</p>
+                    </div>
+                  </td>
+                  <td class="padding-top-bottom-1rem">Maria Anders</td>
+                  <td class="padding-top-bottom-1rem">Germany</td>
+                  <td class="padding-top-bottom-1rem">Maria Anders</td>
+                  <td class="padding-top-bottom-1rem">
+                    <div class="flex gap-1rem">
+                      <button class="btn btn-info addContactButton button-radius-07 flex items-center" type="button">
+                        Modifier
+                      </button>
+                      <button class="btn btn-danger addContactButton button-radius-07 flex items-center" type="button">
+                        Supprimer
+                      </button>
+                    </div>
+                  </td>
+                </tr> -->
+              </tbody>
+            </table>
+          </div>
+
+        </div>
+        <!-- End contact list -->
+
+      </div>
+      <!-- End contact list container -->
+
+      <!-- Start contact form container -->
+      <div id="contactFormContainer" class="display-none">
+        <div class="flex items-center margin-top-bottom-1rem">
+          <button id="arrowBack" class="button button-radius-10 padding-05 no-border flex items-center" type="button">
+            <span class="material-symbols-outlined">
+              arrow_back
+            </span>
+          </button>
+        </div>
+        <div class="contact-container flex items-center">
+          <div>
+            <form>
+              <div class="input-field">
+                <input type="text" name="contactFirstName" id="contactFirstName" placeholder="Prénom">
+              </div><br>
+              <div class="input-field">
+                <input type="text" name="contactName" id="contactName" placeholder="Nom">
+              </div><br>
+              <div>
+                <button id="saveContact" class="button button-radius-10 padding-05 no-border flex items-center"
+                  type="button">
+                  Enregistrer
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+      <!-- End contact form container -->
+
+    </section>
+    <!-- End main section -->
+  </main>
+  <div class="position display-none md-display-block">
+    <button type="button" class="button flex items-center contain button-radius-07 button-shadow">
+      <span class="material-symbols-outlined"> add </span>
+    </button>
+  </div>
+</body>
+
+<script src="js/index.js"></script>
+
+</html>

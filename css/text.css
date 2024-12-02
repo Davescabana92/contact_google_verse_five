@@ -1,0 +1,52 @@
+.title {
+  color: var(--text-color);
+  font-style: normal;
+}
+
+.title span {
+  font-size: 1rem;
+  font-weight: 800;
+  text-decoration: wavy;
+}
+
+.title-level-1 {
+  font-size: 1.7rem;
+  font-weight: 400;
+}
+
+.title-level-2 {
+  font-size: 1rem;
+}
+
+.title-level-3 {
+  font-size: 0.95rem;
+}
+
+.text {
+  color: var(--text-color);
+  font-weight: 400;
+}
+
+.text th {
+  font-weight: 400 !important;
+}
+
+.text-align-center {
+  text-align: center;
+}
+
+.text-align-left {
+  text-align: left;
+}
+
+.text-badge {
+  font-size: 2rem;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--white);
+  background-color: var(--primary-color);
+}
